@@ -1,0 +1,22 @@
+class Solution(object):
+  def missing(self, array):
+    """
+    input: int[] array
+    return: int
+    """
+    # write your solution here
+    if len(array) == 0:
+      return 1
+    # if the first element is not 1, the missing number always is one 
+    if len(array) > 0 and array[0] != 1:
+      return 1
+    left, right = 0, len(array) - 1
+    while left <= right:
+      mid = int((left + right)/2)
+      if array[mid] != mid + 1 and array[mid - 1] == mid:
+        return mid + 1
+      elif array[mid] != mid + 1:
+        right = mid - 1
+      else:
+        left = mid + 1
+    return array[-1] + 1

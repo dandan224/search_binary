@@ -1,3 +1,4 @@
+# Solution #1: not using the binary search
 class Solution(object):
   def divide(self, a, b):
     """

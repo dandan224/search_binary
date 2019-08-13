@@ -18,17 +18,17 @@ class Solution(object):
       while left1 <= right1:
         mid1 = int((left1 + right1)/2)
         if array[mid1] < target:
-          left = mid1 + 1
+          left1 = mid1 + 1
         elif array[mid1] > target:
-          right = mid1 - 1
+          right1 = mid1 - 1
         else:
           return mid1
       while left2 <= right2:
         mid2 = int((left2 + right2)/2)
         if array[mid2] < target:
-          right = mid2 - 1    
+          right2 = mid2 - 1    
         elif array[mid2] > target:
-          left = mid2 + 1
+          left2 = mid2 + 1
         else:
           return mid2
       return -1
